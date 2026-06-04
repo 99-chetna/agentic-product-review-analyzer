@@ -1,19 +1,22 @@
-from transformers import pipeline
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+analyzer = SentimentIntensityAnalyzer()
 
 class SentimentAgent:
 
-    def __init__(self):
-        self.sentiment_model = pipeline(
-            "sentiment-analysis"
-        )
-
     def analyze(self, text):
-        try:
-            result = self.sentiment_model(
-                str(text)[:512]
-            )[0]
 
-            return result["label"]
+        try:
+
+            score = analyzer.polarity_scores(
+                str(text)
+            )
+
+            if score["compound"] >= 0:
+                return "POSITIVE"
+
+            return "NEGATIVE"
 
         except:
+
             return "UNKNOWN"
