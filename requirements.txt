@@ -8,3 +8,5 @@ gunicorn
 groq
 python-dotenv
 vaderSentiment
+feedparser
+beautifulsoup4
