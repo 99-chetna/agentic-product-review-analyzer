@@ -6,3 +6,4 @@ torch
 openpyxl
 gunicorn
 groq
+python-dotenv
