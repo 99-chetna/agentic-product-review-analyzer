@@ -98,15 +98,48 @@ body{
 
     </div>
 
+<style>
+.section-title{
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.recommend-card{
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 18px;
+    height: 100%;
+    border-left: 5px solid #4f46e5;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.recommend-card h5{
+    font-size: 22px;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+.recommend-card ul{
+    padding-left: 20px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+}
+</style>
+
 <div class="card mt-4 p-4">
 
-    <h4 class="mb-3">
-         AI Recommendations
-    </h4>
+```
+<h4 class="section-title mb-4">
+    AI Recommendations
+</h4>
 
-    <div class="row">
+<div class="row g-3">
 
-        <div class="col-md-4">
+    <div class="col-md-4">
+        <div class="recommend-card">
 
             <h5>Strengths</h5>
 
@@ -117,10 +150,13 @@ body{
             </ul>
 
         </div>
+    </div>
 
-        <div class="col-md-4">
+    <div class="col-md-4">
+        <div class="recommend-card">
 
             <h5>Complaints</h5>
+
             <ul>
                 {% for item in recommendation_data.complaints %}
                 <li>{{ item }}</li>
@@ -128,10 +164,12 @@ body{
             </ul>
 
         </div>
+    </div>
 
-        <div class="col-md-4">
+    <div class="col-md-4">
+        <div class="recommend-card">
 
-            <h5> Recommendations</h5>
+            <h5>Recommendations</h5>
 
             <ul>
                 {% for item in recommendation_data.recommendations %}
@@ -140,10 +178,10 @@ body{
             </ul>
 
         </div>
-
     </div>
 
 </div>
+```
 
 </div>
 
