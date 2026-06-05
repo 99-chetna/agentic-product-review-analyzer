@@ -70,12 +70,12 @@ body{
         </h6>
 
         <h6>
-             Positive Reviews:
+             ✅ Positive Reviews:
             {{ sentiments.POSITIVE if sentiments.POSITIVE else 0 }}
         </h6> 
 
         <h6>
-            Negative Reviews:
+            ❌ Negative Reviews:
             {{ sentiments.NEGATIVE if sentiments.NEGATIVE else 0 }}
         </h6>
 
@@ -108,7 +108,7 @@ body{
 
         <div class="col-md-4">
 
-            <h5><b>Strengths</b></h5>
+            <h5>Strengths</h5>
 
             <ul>
                 {% for item in recommendation_data.strengths %}
@@ -120,7 +120,7 @@ body{
 
         <div class="col-md-4">
 
-            <h5><b>Complaints</b>/h5>
+            <h5>Complaints</h5>
             <ul>
                 {% for item in recommendation_data.complaints %}
                 <li>{{ item }}</li>
@@ -131,7 +131,7 @@ body{
 
         <div class="col-md-4">
 
-            <h5><b></h5> Recommendations</b></h5>
+            <h5> Recommendations</h5>
 
             <ul>
                 {% for item in recommendation_data.recommendations %}
